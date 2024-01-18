@@ -1,9 +1,38 @@
-*{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vedi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+
+<form action="" method="post">
+    <h1>LOGIN</h1>
+    <label >Username</label>
+    <input name="email" type="text" placeholder="enter ur name ">
+    <label >Password</label>
+    <input name="password" type="password" placeholder="contains 8 digits">
+    <button>login</button>
+    <a href="#">forgot password ? </a><br>
+   <p style="font-size: 12px;text-align: center;"> Don't have an account<a href="regiterform.php">Register</a>
+</p>
+</form>
+
+<style>
+    *{
     margin: 0%;
     padding: 0%;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    cursor: pointer;
+   
 }
 body{
     height: 100vh;
@@ -55,7 +84,7 @@ input{
 button{
     width: 50%;
     margin: 3% auto;
-    color: white;
+    color: black;
     font-size: 15px;
     opacity: .7;
     background: rgba(255, 255, 255,.6);
@@ -74,3 +103,16 @@ a{
     opacity: .7;
     
 }
+</style>
+
+<?php
+$conn= require_once('dbFunction.php');
+if ($_SERVER["REQUEST_METHOD"]=="POST" && ISSET($_POST["register"])) {
+    $username=$_POST["username"];
+    $password=password_hash($_POST["password"],PASSWORD_DEFAULT);
+}
+
+?>
+</body>
+</html>
+

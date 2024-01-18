@@ -61,7 +61,7 @@ input{
     background: transparent;
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255,.6) ;
-    opacity: .8;
+    opacity: 100%;
 }
 button{
     width: 50%;
@@ -90,7 +90,7 @@ a{
 </style>
 
 
-<form action="" method="post">
+<form action="dbFunction.php" method="post">
 
  <h2>REGISTER HERE</h2>
  <label for="fullname">full name <img src="user.png" style="height: 1rem; width:1rem;"></label>
@@ -100,13 +100,13 @@ a{
 <input type="text" name="email" placeholder="your email" required>
 
 <label for="phone-No">mobile<img src="phone.png" style="height: 1rem; width:1rem;"></label>
-<input type="tel" placeholder="mobile number" required>
+<input name="mobile" type="tel" placeholder="mobile number" required>
 
 <label for="password">password <img src="password.png" style="height: 1rem; width:1rem;"></label>
 <input type="password" name="password" placeholder="strong password" required>
 
 <label for="password">confirm password <img src="password.png" style="height: 1rem; width:1rem;"></label>
-<input type="password" name="password" placeholder="strong password" required>
+<input type="password" name="password_c" placeholder="strong password" required>
 
 <button type="submit" >register</button>
 </form>
